@@ -4,7 +4,8 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<!--Aubrey Farnbach (Wright) Section 2 Group 1
+This is the index list movie page that was created through scaffolding-->
 <h1>Movies</h1>
 
 <p>
@@ -42,39 +43,40 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Year)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Director)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Edited)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lent_To)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Notes)
-            </td>
-            <td>
-                <a class="btn btn-info" asp-action="Edit" role="button" asp-route-id="@item.ApplicationResponseID">Edit</a> 
-            </td>
-            <td>
-                <a class="btn btn-danger" asp-action="Delete" role="button" asp-route-id="@item.ApplicationResponseID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Director)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Edited)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lent_To)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Notes)
+                </td>
+                <td>
+                    <a class="btn btn-info" asp-action="Edit" role="button" asp-route-id="@item.ApplicationResponseID">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-action="Delete" role="button" asp-route-id="@item.ApplicationResponseID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
