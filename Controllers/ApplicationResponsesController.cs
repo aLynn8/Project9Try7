@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Project3.Models;
-
+//Aubrey Farnbach (Wright) Section 2 Group 1
+//This is the controller that was created through scaffolding
 namespace Project3.Controllers
 {
     public class ApplicationResponsesController : Controller
